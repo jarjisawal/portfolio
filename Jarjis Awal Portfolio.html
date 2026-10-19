@@ -1,0 +1,343 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Jarjis Awal Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single reading column (max 1080px) — hero, results band, carrier story, case studies grid, timeline, capabilities, credentials. */
+:root {
+  --bg: #F4F6F9;
+  --surface: #FFFFFF;
+  --ink: #12203A;
+  --muted: #55627A;
+  --line: #DCE2EB;
+  --navy: #1F3864;
+  --signal: #0B7A75;
+  --signal-soft: #E1F1EF;
+  --display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1420; --surface: #151D2C; --ink: #E7ECF4; --muted: #9BA8BD; --line: #263247;
+    --navy: #9DB6E4; --signal: #4FC6BD; --signal-soft: #11302F; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1420; --surface: #151D2C; --ink: #E7ECF4; --muted: #9BA8BD; --line: #263247;
+  --navy: #9DB6E4; --signal: #4FC6BD; --signal-soft: #11302F; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; }
+h3 { font-size: 1.1rem; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--signal); }
+.lede { color: var(--muted); max-width: 62ch; }
+.section-head { display: grid; gap: 10px; margin-bottom: 32px; }
+a { color: var(--navy); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+
+/* Hero */
+.hero { padding-block: 64px 48px; display: grid; gap: 28px; }
+.hero-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.bars { display: inline-flex; align-items: flex-end; gap: 3px; height: 18px; }
+.bars span { width: 4px; background: var(--signal); border-radius: 1px; }
+.bars span:nth-child(1) { height: 25%; } .bars span:nth-child(2) { height: 50%; }
+.bars span:nth-child(3) { height: 75%; } .bars span:nth-child(4) { height: 100%; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
+.hero .role { font-family: var(--display); font-size: clamp(1.05rem, 2.2vw, 1.35rem); color: var(--navy); font-weight: 500; }
+.hero .thesis { font-size: 1.15rem; max-width: 60ch; }
+.contact { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 0.98rem; color: var(--muted); }
+.contact .email { font-family: var(--mono); color: var(--ink); user-select: all; }
+.copy { font: inherit; font-size: 0.85rem; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 4px 10px; border-radius: 6px; cursor: pointer; }
+.copy:hover { border-color: var(--signal); }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { font-family: var(--mono); font-size: 0.78rem; padding: 4px 10px; border-radius: 999px; background: var(--signal-soft); color: var(--signal); }
+
+/* Results */
+.results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.stat { background: var(--surface); padding: 22px 20px; display: grid; gap: 6px; align-content: start; }
+.stat b { font-family: var(--display); font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 600; color: var(--navy); font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
+.note { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
+
+/* Carrier */
+.carrier { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: start; }
+.carrier-copy { display: grid; gap: 16px; min-width: 0; }
+.carrier-list { display: grid; gap: 0; border-top: 1px solid var(--line); min-width: 0; }
+.carrier-item { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
+.carrier-item .who { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.carrier-item .when { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+.carrier-item p { color: var(--muted); font-size: 0.97rem; }
+.logos-text { font-family: var(--display); font-weight: 600; color: var(--navy); }
+
+/* Case studies */
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+.case .meta { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+.case dl { margin: 0; display: grid; gap: 8px; }
+.case dt { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--signal); }
+.case dd { margin: 0 0 4px; font-size: 0.97rem; }
+.case .outcome { border-top: 1px solid var(--line); padding-top: 12px; font-weight: 600; color: var(--navy); }
+
+/* Timeline */
+.timeline { display: grid; gap: 0; }
+.job { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.job:first-child { border-top: 1px solid var(--line); }
+.job .dates { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.job h3 { font-size: 1.02rem; }
+.job .org { color: var(--navy); font-weight: 600; }
+.job p { color: var(--muted); font-size: 0.97rem; margin-top: 4px; }
+
+/* Capabilities */
+.caps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.caps ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.caps li { padding-left: 14px; position: relative; font-size: 0.97rem; }
+.caps li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--signal); border-radius: 1px; }
+.tools { margin-top: 32px; display: grid; gap: 10px; }
+.tools div { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; font-size: 0.95rem; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.tools dt, .tools strong { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+
+/* Credentials */
+.creds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.creds ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 14px; }
+.creds li b { display: block; font-weight: 600; }
+.creds li span { color: var(--muted); font-size: 0.95rem; }
+.badge { font-family: var(--mono); font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: var(--signal-soft); color: var(--signal); margin-left: 6px; vertical-align: 2px; }
+
+footer { border-top: 1px solid var(--line); padding-block: 40px 56px; display: grid; gap: 14px; }
+footer h2 { font-size: 1.4rem; }
+
+@media (max-width: 760px) {
+  .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .carrier, .cases, .caps, .creds { grid-template-columns: 1fr; }
+  .job { grid-template-columns: 1fr; gap: 4px; }
+  .tools div { grid-template-columns: 1fr; gap: 2px; }
+  section { padding-block: 44px; }
+}
+@media (max-width: 420px) { .results { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: no-preference) {
+  .bars span { animation: rise 1.4s ease-out both; }
+  .bars span:nth-child(2) { animation-delay: .12s; } .bars span:nth-child(3) { animation-delay: .24s; } .bars span:nth-child(4) { animation-delay: .36s; }
+  @keyframes rise { from { transform: scaleY(.3); transform-origin: bottom; } to { transform: scaleY(1); transform-origin: bottom; } }
+}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-top">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span class="eyebrow">Portfolio · New York, NY</span>
+    </div>
+    <h1>Jarjis Awal</h1>
+    <p class="role">Technical Solutions &amp; Infrastructure Leader · Enterprise Mobility, Security &amp; Carrier Partnerships</p>
+    <p class="thesis">I work between wireless carriers and the enterprise customers they serve. I have trained teams inside T-Mobile, Verizon, and AT&amp;T stores, and I lead IT teams that deploy, secure, and manage company devices, most recently for 500+ users across 8 countries.</p>
+    <div class="contact">
+      <span class="email" id="email">jarjisawal@gmail.com</span>
+      <button class="copy" id="copy-email" type="button">Copy email</button>
+      <span>(347) 279-6586</span>
+      <a href="https://www.linkedin.com/in/md-awal-039aab90" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="pill-row" aria-label="Focus areas">
+      <span class="pill">Carrier enablement</span><span class="pill">Apple &amp; enterprise MDM</span><span class="pill">Zero Trust security</span><span class="pill">SOC 2 · ISO 27001</span><span class="pill">AI in mobile</span>
+    </div>
+  </header>
+
+  <section aria-labelledby="results-h">
+    <div class="section-head">
+      <span class="eyebrow">Selected results</span>
+      <h2 id="results-h">Measured outcomes</h2>
+    </div>
+    <div class="results">
+      <div class="stat"><b>~$150K</b><span>Saved within my first 90 days at ActiveViam</span></div>
+      <div class="stat"><b>~$1M</b><span>Annual savings projected over the next 180 days</span></div>
+      <div class="stat"><b>500+ users</b><span>Migrated across 8 countries and multiple time zones</span></div>
+      <div class="stat"><b>~70%</b><span>Faster onboarding and offboarding after automation</span></div>
+      <div class="stat"><b>25–30 apps</b><span>Centralized under Okta single sign-on and MFA</span></div>
+      <div class="stat"><b>$10M+</b><span>Operational synergies across three acquisitions</span></div>
+    </div>
+    <p class="note">The ~$1M figure is a projection from an active cost optimization roadmap.</p>
+  </section>
+
+  <section aria-labelledby="carrier-h">
+    <div class="carrier">
+      <div class="carrier-copy">
+        <span class="eyebrow">Wireless carrier partnerships</span>
+        <h2 id="carrier-h">On the floor with <span class="logos-text">T-Mobile, Verizon &amp; AT&amp;T</span></h2>
+        <p class="lede">Carrier stores are where new devices meet real customers. I have spent years there, training sales teams on device technology, approved manufacturer–carrier promotions, and the features that drive upgrades, including on-device AI such as Apple Intelligence, Galaxy AI, and Google Gemini.</p>
+      </div>
+      <div class="carrier-list">
+        <div class="carrier-item">
+          <div class="who"><h3>Pilot Program Lead · T-ROC</h3><span class="when">NY tri-state area</span></div>
+          <p>Led field-based product knowledge and sales strategy training across direct and indirect T-Mobile, Verizon, and AT&amp;T stores for JBL, Harman Kardon, and Belkin. My team was among the first to roll out Belkin's tempered glass applicator technology, including carrier locations inside Walmart.</p>
+        </div>
+        <div class="carrier-item">
+          <div class="who"><h3>Mobile Sales &amp; Technology Trainer</h3><span class="when">Ongoing</span></div>
+          <p>Train Boost Mobile and Metro by T-Mobile teams on the latest Apple and Android devices, keeping them ahead of new launches and wireless trends.</p>
+        </div>
+        <div class="carrier-item">
+          <div class="who"><h3>IT Specialist · Sprint</h3><span class="when">2015 – 2018</span></div>
+          <p>Led the technical demo training team and built the demo model sales teams used to present devices to customers.</p>
+        </div>
+        <div class="carrier-item">
+          <div class="who"><h3>IT Analyst · Grameenphone (Telenor Group)</h3><span class="when">2012 – 2015</span></div>
+          <p>Supported contact-center IT for Bangladesh's largest mobile network operator, improving call quality scores by 25%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cases-h">
+    <div class="section-head">
+      <span class="eyebrow">Case studies</span>
+      <h2 id="cases-h">Work I led</h2>
+    </div>
+    <div class="cases">
+      <article class="case">
+        <span class="meta">ActiveViam · Fintech · 2025–2026</span>
+        <h3>Global move to Microsoft 365</h3>
+        <dl>
+          <dt>Challenge</dt><dd>A distributed workforce in 8 countries on Google Workspace, with time zones that left no shared downtime window.</dd>
+          <dt>What I did</dt><dd>Under my direct leadership, my team sequenced cutovers by region and drove adoption through clear communication and enablement.</dd>
+        </dl>
+        <p class="outcome">500+ users migrated with minimal business disruption.</p>
+      </article>
+      <article class="case">
+        <span class="meta">ActiveViam · Identity &amp; devices</span>
+        <h3>Okta + JumpCloud foundation with no standing admins</h3>
+        <dl>
+          <dt>Challenge</dt><dd>Scattered app logins, local admin rights on devices, and manual joiner-leaver work.</dd>
+          <dt>What I did</dt><dd>Centralized apps under Okta SSO and MFA, rolled out JumpCloud for MDM, and replaced every local admin account with request-and-approve, just-in-time elevation.</dd>
+        </dl>
+        <p class="outcome">25–30 apps centralized and ~70% faster onboarding and offboarding.</p>
+      </article>
+      <article class="case">
+        <span class="meta">ActiveViam · First 90 days</span>
+        <h3>Infrastructure cost optimization</h3>
+        <dl>
+          <dt>Challenge</dt><dd>Redundant systems, legacy hardware, and overlapping fiber, security, and ISP contracts.</dd>
+          <dt>What I did</dt><dd>Integrated systems, decommissioned legacy machines, retired redundant fiber and security systems, moved workloads to the cloud, and deployed a new ISP design with resilient failover.</dd>
+        </dl>
+        <p class="outcome">~$150K saved, supporting the company's recent major acquisition.</p>
+      </article>
+      <article class="case">
+        <span class="meta">ActiveViam · Endpoint security</span>
+        <h3>CrowdStrike to Microsoft Defender</h3>
+        <dl>
+          <dt>Challenge</dt><dd>Replace the endpoint protection platform across the company without leaving any device exposed.</dd>
+          <dt>What I did</dt><dd>Defined the deployment strategy, a phased pilot-to-production rollout, and hardened EDR and attack surface reduction baselines.</dd>
+        </dl>
+        <p class="outcome">Enterprise-wide transition with no gap in protection.</p>
+      </article>
+      <article class="case">
+        <span class="meta">SAATVA · E-commerce · 2020</span>
+        <h3>Traffic prioritization for remote work</h3>
+        <dl>
+          <dt>Challenge</dt><dd>The pandemic pushed everyone onto shared connections at once, and critical users were competing for bandwidth.</dd>
+          <dt>What I did</dt><dd>Deployed BigLeaf SD-WAN with QoS to guarantee performance for business-critical users and applications, an approach similar in spirit to 5G network slicing.</dd>
+        </dl>
+        <p class="outcome">Reliable performance for priority users during the shift to remote work.</p>
+      </article>
+      <article class="case">
+        <span class="meta">Whitsons Culinary Group · 2024–2025</span>
+        <h3>IT integration across three acquisitions</h3>
+        <dl>
+          <dt>Challenge</dt><dd>Three acquired companies with overlapping contracts, systems, and vendors.</dd>
+          <dt>What I did</dt><dd>Consolidated infrastructure, migrated systems, and rationalized vendor portfolios into one technology strategy for 5,000+ users.</dd>
+        </dl>
+        <p class="outcome">$10M+ in operational synergies.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <div class="section-head">
+      <span class="eyebrow">Experience</span>
+      <h2 id="exp-h">Career timeline</h2>
+    </div>
+    <div class="timeline">
+      <div class="job"><span class="dates">Dec 2025 – Present</span><div><h3>Senior Infrastructure Engineer · <span class="org">ActiveViam</span></h3><p>Hired to lead the company's global IT transformation, with SOC 2 and ISO 27001 compliance across three countries.</p></div></div>
+      <div class="job"><span class="dates">Aug 2023 – Nov 2025</span><div><h3>Sr. IT Business Analyst (Infrastructure Manager) · <span class="org">Whitsons Culinary Group</span></h3><p>Led infrastructure across 8 sites and 5,000+ users at 99.99% uptime, and delivered 50+ projects under budget.</p></div></div>
+      <div class="job"><span class="dates">Mar 2022 – Aug 2024</span><div><h3>Sr. Manager IT (Infrastructure &amp; Cybersecurity) · <span class="org">The Art Students League of New York</span></h3><p>Led 10 direct reports, managed Apple devices with JAMF, and cut cyber risk by 80%.</p></div></div>
+      <div class="job"><span class="dates">Feb 2020 – Feb 2022</span><div><h3>Senior IT Specialist · <span class="org">SAATVA</span></h3><p>Built the IT department from the ground up and led a 10-person team.</p></div></div>
+      <div class="job"><span class="dates">Jan 2019 – Feb 2020</span><div><h3>Data Security Service Specialist · <span class="org">NYC Administration for Children's Services</span></h3><p>Implemented NIST-aligned security strategies and drove customer onboarding and adoption.</p></div></div>
+      <div class="job"><span class="dates">Dec 2015 – Nov 2018</span><div><h3>IT Specialist · <span class="org">Sprint</span></h3><p>Supported technology adoption across retail and business sales channels.</p></div></div>
+      <div class="job"><span class="dates">Jan 2012 – Aug 2015</span><div><h3>IT Analyst · <span class="org">Grameenphone (Telenor Group)</span></h3><p>Optimized contact-center routing and VoIP quality for a national mobile operator.</p></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="caps-h">
+    <div class="section-head">
+      <span class="eyebrow">Capabilities</span>
+      <h2 id="caps-h">What I bring</h2>
+    </div>
+    <div class="caps">
+      <div><h3>Leadership &amp; business</h3><ul><li>Technical team leadership and mentorship</li><li>Stakeholder and executive communication</li><li>Strategic and financial planning</li><li>Cost optimization and reinvestment</li><li>Partner and vendor negotiation</li></ul></div>
+      <div><h3>Carrier &amp; mobility</h3><ul><li>Carrier retail enablement</li><li>Apple and Android device training</li><li>Enterprise mobility strategy</li><li>AI in mobile and enterprise ecosystems</li><li>Customer readiness and platform adoption</li></ul></div>
+      <div><h3>Security &amp; infrastructure</h3><ul><li>Security and privacy strategy</li><li>Regulatory compliance and audit readiness</li><li>Access governance and least privilege</li><li>Hybrid cloud strategy</li><li>Platform migration and change management</li></ul></div>
+    </div>
+    <div class="tools">
+      <div><strong>Endpoint &amp; MDM</strong><span>JAMF, JumpCloud, Microsoft Defender for Endpoint, CrowdStrike, Kaseya VSA</span></div>
+      <div><strong>Identity</strong><span>Okta, Duo, Microsoft Entra ID, Active Directory</span></div>
+      <div><strong>Cloud</strong><span>Microsoft 365, Azure, AWS, Google Workspace, VMware, Hyper-V</span></div>
+      <div><strong>Network &amp; security</strong><span>Cisco, Juniper, Ubiquiti, BigLeaf SD-WAN, Rapid7, SIEM</span></div>
+      <div><strong>Automation &amp; AI</strong><span>Microsoft Copilot, ChatGPT, Claude, Make.com, PowerShell, Python</span></div>
+      <div><strong>Compliance</strong><span>SOC 2 Type II, ISO 27001, PCI DSS, NIST, Drata</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cred-h">
+    <div class="creds">
+      <div>
+        <span class="eyebrow">Education</span>
+        <ul>
+          <li><b>M.S., Cybersecurity &amp; Digital Forensics</b><span>John Jay College of Criminal Justice (CUNY) · 2026 · Full scholarship from the NYPD professional development department</span></li>
+          <li><b>B.Tech., Computer Information Systems</b><span>New York City College of Technology · 2019</span></li>
+          <li><b>A.S., Computer Information Systems</b><span>LaGuardia Community College · 2018</span></li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Certifications</span>
+        <ul>
+          <li><b>5G Mobile Networks Specialization <span class="badge">In progress</span></b><span>Coursera · 5G architecture, private networks, network slicing</span></li>
+          <li><b>Cyber Threats and Protection Analysis</b><span>IBM (Coursera) · 2021</span></li>
+          <li><b>Certified IT and Security Professional</b><span>Google (Coursera) · 2021</span></li>
+          <li><b>Certified Network Assurance</b><span>Texas A&amp;M Institute (U.S. Homeland Security) · 2017</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="eyebrow">Contact</span>
+    <h2>Let's talk about carriers, Apple devices, and enterprise adoption.</h2>
+    <div class="contact">
+      <span class="email">jarjisawal@gmail.com</span>
+      <span>(347) 279-6586</span>
+      <a href="https://www.linkedin.com/in/md-awal-039aab90" target="_blank" rel="noopener">linkedin.com/in/md-awal-039aab90</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function () {
+  var btn = this, text = 'jarjisawal@gmail.com';
+  function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); }
+  function select() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected');
+  }
+  try {
+    navigator.clipboard.writeText(text).then(function () { done('Copied'); }, select);
+  } catch (e) { select(); }
+});
+</script>
+
+</body></html>
